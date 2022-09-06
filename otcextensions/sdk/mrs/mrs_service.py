@@ -10,14 +10,15 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
+
 from openstack import service_description
 
 from otcextensions.sdk.mrs.v1 import _proxy
 
 
 class MrsService(service_description.ServiceDescription):
-    """The MRS service."""
+    """The MRS (Big Data) service."""
 
     supported_versions = {
-        '1': _proxy.Proxy
+        '1': _proxy.Proxy,
     }
